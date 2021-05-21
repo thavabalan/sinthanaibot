@@ -15,7 +15,7 @@ class TwitterController extends Controller
 
     	$vara = Quote::pluck('qte')->random();
         $author = Author::pluck('name')->first();
-        $qoute = $vara.'-'.$author;
+        $qoute = $vara.'-'.$author.' #TamilsLeaderPrabhakaran';
         $directory= public_path() . '/images/';
         $filelist = Storage::allFiles('public/images');
         $randomFile = $filelist[rand(0, count($filelist) - 1)];
